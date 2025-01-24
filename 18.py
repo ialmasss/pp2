@@ -1,1 +1,1 @@
-print(im tired)
+print("im tired")
