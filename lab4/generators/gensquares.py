@@ -1,8 +1,9 @@
-a = int(input("Input A: "))
-b = int(input("Input B: "))
+n = int(input("Input N: "))
 
-def squares(a, b):
-    for i in range(a, b + 1):
-        yield i ** 2
+def gensquares(n):
+    squares = []
+    for i in range(n + 1):
+        squares.append(i ** 2)
+    return squares
 
-print(*squares(a, b), sep = ', ' )
+print(gensquares(n))
