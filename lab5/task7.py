@@ -1,10 +1,10 @@
 import re
 
-s = input('Input your string: ')
+def to_upper(match):
+    return match.group(1).upper()
 
-def snake_to_camel(s):
-    words = s.split('_')
-    c_words = words[0].capitalize() + ''.join(word.capitalize() for word in words[1:])
-    return c_words    
-    
-print(snake_to_camel(s))
+s = input("input text: ")
+
+camel_case = re.sub(r'_([a-z])', to_upper, s)
+
+print("CamelCase:", camel_case.capitalize())
